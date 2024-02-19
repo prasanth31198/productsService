@@ -1,0 +1,20 @@
+spring:
+  web.resources.static-locations: "file:./app"
+  config.activate.on-profile: default
+  sql.init.schema-locations: classpath:schema-h2.sql
+cds:
+    odata-v4:
+      endpoint:
+        path: "/api"
+
+    security:
+      mock:
+        users:
+          admin:
+            name: admin
+            password: admin
+            roles:
+              - admin
+          user:
+            name: user
+            password: user
